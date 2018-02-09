@@ -6,22 +6,29 @@ export class Routes {
   routes: Route[] = [];
 
   defaultItem: any = {
-   "numberplate": "WP 12564",
-    "eta": "12 minutes"
+    "busRoute":"120",
+    "numberplate": "WP 12564",
+    "eta": "12 minutes",
+
   };
 
 
   constructor() {
     let routes  = [
       {
+      "busRoute":"120",
       "numberplate": "WP 12564",
       "eta": "12 minutes"
+
     },
      {
+      "busRoute":"138",
       "numberplate": "QL 9575",
       "eta": "1 hour"
+
     },
      {
+      "busRoute":"154",
       "numberplate": "ND 2484",
       "eta": " 1h 12m"
     }

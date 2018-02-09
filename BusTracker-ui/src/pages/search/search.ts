@@ -27,7 +27,7 @@ export class SearchPage {
       return;
     }
     this.currentRoutes = this.routes.query({
-      numberplate: val
+      busRoute: val
     });
   }
 
