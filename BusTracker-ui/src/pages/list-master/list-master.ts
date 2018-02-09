@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
 import { IonicPage, ModalController, NavController } from 'ionic-angular';
 
-import { Item } from '../../models/item';
-import { Items } from '../../providers/providers';
+import { Route } from '../../models/route';
+import { Routes } from './../../mocks/providers/routes';
+
 
 @IonicPage()
 @Component({
@@ -10,14 +11,14 @@ import { Items } from '../../providers/providers';
   templateUrl: 'list-master.html'
 })
 export class ListMasterPage {
-  currentItems: Item[];
+  currentItems: Route[];
 
-  constructor(public navCtrl: NavController, public items: Items, public modalCtrl: ModalController) {
-    this.currentItems = this.items.query();
+  constructor(public navCtrl: NavController, public routes: Routes, public modalCtrl: ModalController) {
+    this.currentItems = this.routes.query();
   }
 
   /**
-   * The view loaded, let's query our items for the list
+   * The view loaded, let's query our routes for the list
    */
   ionViewDidLoad() {
   }
@@ -30,23 +31,23 @@ export class ListMasterPage {
     let addModal = this.modalCtrl.create('ItemCreatePage');
     addModal.onDidDismiss(item => {
       if (item) {
-        this.items.add(item);
+        this.routes.add(item);
       }
     })
     addModal.present();
   }
 
   /**
-   * Delete an item from the list of items.
+   * Delete an item from the list of routes.
    */
   deleteItem(item) {
-    this.items.delete(item);
+    this.routes.delete(item);
   }
 
   /**
    * Navigate to the detail page for this item.
    */
-  openItem(item: Item) {
+  openItem(item: Route) {
     this.navCtrl.push('ItemDetailPage', {
       item: item
     });

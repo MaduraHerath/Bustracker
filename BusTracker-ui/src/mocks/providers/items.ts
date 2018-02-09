@@ -14,13 +14,7 @@ export class Items {
 
 
   constructor() {
-    let routes  = [
-      {
-
-      "bus-numberplate": "WP 12564",
-      "estimatetime": "12minutes"
-    }
-    ]
+  
     let items = [
       {
         "name": "Burt Bear",

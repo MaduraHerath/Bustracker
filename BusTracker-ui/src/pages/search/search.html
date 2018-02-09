@@ -8,16 +8,16 @@
 
 
 <ion-content>
-  <ion-searchbar (ionInput)="getItems($event)" placeholder="{{ 'SEARCH_PLACEHOLDER' | translate }}"></ion-searchbar>
+  <ion-searchbar (ionInput)="getRoutes($event)" placeholder="{{ 'SEARCH_PLACEHOLDER' | translate }}"></ion-searchbar>
   <ion-list>
-    <button ion-item (click)="openItem(item)" *ngFor="let item of currentItems">
+    <button ion-item (click)="openRoutes(route)" *ngFor="let route of currentRoutes">
       <ion-avatar item-start>
-        <img [src]="item.profilePic" />
+        <ion-icon name="md-bus" class="bus-icon"></ion-icon>
       </ion-avatar>
-      <h2>{{item.name}}</h2>
-      <p>{{item.about}}</p>
-      <ion-note item-end *ngIf="item.note">{{item.note}}</ion-note>
+      <h2>{{route.numberplate}}</h2>
+      <p>{{route.eta}}</p>
+      <!--<ion-note item-end *ngIf="item.note">{{item.eta}}</ion-note>-->
     </button>
   </ion-list>
-  <page-list-master></page-list-master>
+  
 </ion-content>

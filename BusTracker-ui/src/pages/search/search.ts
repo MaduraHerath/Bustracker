@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
-import { Item } from '../../models/item';
-import { Items } from '../../providers/providers';
+import { Route } from './../../models/route';
+import { Routes } from '../../providers/providers';
+
+
 
 @IonicPage()
 @Component({
@@ -11,30 +13,30 @@ import { Items } from '../../providers/providers';
 })
 export class SearchPage {
 
-  currentItems: any = [];
+  currentRoutes: any = [];
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public items: Items) { }
+  constructor(public navCtrl: NavController, public navParams: NavParams, public routes: Routes) { }
 
   /**
    * Perform a service for the proper items.
    */
-  getItems(ev) {
+  getRoutes(ev) {
     let val = ev.target.value;
     if (!val || !val.trim()) {
-      this.currentItems = [];
+      this.currentRoutes = [];
       return;
     }
-    this.currentItems = this.items.query({
-      name: val
+    this.currentRoutes = this.routes.query({
+      numberplate: val
     });
   }
 
   /**
    * Navigate to the detail page for this item.
    */
-  openItem(item: Item) {
+  openRoutes(route: Route) {
     this.navCtrl.push('ItemDetailPage', {
-      item: item
+      route: route
     });
   }
 
