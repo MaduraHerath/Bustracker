@@ -2,6 +2,7 @@
   "BACK_BUTTON_TEXT": "Back",
 
   "NAME": "Name",
+  "MobileNumber":"Mobile Number",
   "EMAIL": "Email",
   "USERNAME": "Username",
   "PASSWORD": "Password",

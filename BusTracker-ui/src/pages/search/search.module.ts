@@ -3,17 +3,19 @@ import { TranslateModule } from '@ngx-translate/core';
 import { IonicPageModule } from 'ionic-angular';
 
 import { SearchPage } from './search';
-
 @NgModule({
   declarations: [
     SearchPage,
+    
   ],
   imports: [
     IonicPageModule.forChild(SearchPage),
-    TranslateModule.forChild()
+    TranslateModule.forChild(),
+    
   ],
   exports: [
-    SearchPage
+    SearchPage,
+    
   ]
 })
 export class SearchPageModule { }

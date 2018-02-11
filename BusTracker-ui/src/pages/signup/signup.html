@@ -1,44 +1,32 @@
-<ion-header>
+<ion-content text-center class="vertical-align-content">
 
-  <ion-navbar>
-    <ion-title>{{ 'SIGNUP_TITLE' | translate }}</ion-title>
-  </ion-navbar>
+  <ion-grid>
+    <ion-row>
+        <ion-col> <div class="splash-logo"></div></ion-col>
+    </ion-row>
+    <ion-row>
+    <ion-row>
+      <ion-col class="center">
+          <p style="color:aliceblue">Enter Your mobile number for future notifications</p>
+      </ion-col>
+    </ion-row>
+      <ion-col>
+        <form (submit)="doSignup()">
+          <ion-list>
+         
+            <ion-item class="input-item">       
+              <ion-input type="text" placeholder="Mobile Number"></ion-input>
+              <!--<ion-input type="text" [(ngModel)]="account.name" name="name"></ion-input>-->
+            </ion-item>
+            <div padding>
+              <button ion-button color="light" round>{{ 'SIGNUP_BUTTON' | translate }}</button>
+            </div>
 
-</ion-header>
+          </ion-list>
+        </form>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 
 
-<ion-content>
-  <form (submit)="doSignup()">
-    <ion-list>
-
-      <ion-item>
-        <ion-label fixed>{{ 'NAME' | translate }}</ion-label>
-        <ion-input type="text" [(ngModel)]="account.name" name="name"></ion-input>
-      </ion-item>
-
-      <ion-item>
-        <ion-label fixed>{{ 'EMAIL' | translate }}</ion-label>
-        <ion-input type="email" [(ngModel)]="account.email" name="email"></ion-input>
-      </ion-item>
-
-      <!--
-      Want to add a Username? Here you go:
-
-      <ion-item>
-        <ion-label floating>Username</ion-label>
-        <ion-input type="text" [(ngModel)]="account.username" name="username"></ion-input>
-      </ion-item>
-      -->
-
-      <ion-item>
-        <ion-label fixed>{{ 'PASSWORD' | translate }}</ion-label>
-        <ion-input type="password" [(ngModel)]="account.password" name="password"></ion-input>
-      </ion-item>
-
-      <div padding>
-        <button ion-button color="primary" block>{{ 'SIGNUP_BUTTON' | translate }}</button>
-      </div>
-
-    </ion-list>
-  </form>
 </ion-content>

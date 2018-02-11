@@ -16,6 +16,7 @@ import { Api } from '../providers/providers';
 import { MyApp } from './app.component';
 import { GoogleMaps } from "@ionic-native/google-maps";
 import { Routes } from "../mocks/providers/routes";
+import { Geolocation } from '@ionic-native/geolocation';
 
 // The translate loader needs to know where to load i18n files
 // in Ionic's static asset pipeline.
@@ -68,6 +69,7 @@ export function provideSettings(storage: Storage) {
     SplashScreen,
     StatusBar,
     GoogleMaps,
+    Geolocation,
     { provide: Settings, useFactory: provideSettings, deps: [Storage] },
     // Keep this to enable Ionic's runtime error handling during development
     { provide: ErrorHandler, useClass: IonicErrorHandler }

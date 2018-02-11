@@ -1,13 +1,14 @@
-<ion-header>
+<!--<ion-header>
 
   <ion-navbar>
     <ion-title>{{ 'SEARCH_TITLE' | translate }}</ion-title>
   </ion-navbar>
 
-</ion-header>
+</ion-header>-->
 
 
 <ion-content>
+  <div id="floating-panel">
   <ion-searchbar (ionInput)="getRoutes($event)" placeholder="{{ 'SEARCH_PLACEHOLDER' | translate }}"></ion-searchbar>
   <ion-list>
     <button ion-item (click)="openRoutes(route)" *ngFor="let route of currentRoutes">
@@ -16,8 +17,10 @@
       </ion-avatar>
       <h2>{{route.numberplate}}</h2>
       <p>{{route.eta}}</p>
+      
       <!--<ion-note item-end *ngIf="item.note">{{item.eta}}</ion-note>-->
     </button>
   </ion-list>
-  
+  </div>
+ <div class="map" id="map" #map></div>
 </ion-content>

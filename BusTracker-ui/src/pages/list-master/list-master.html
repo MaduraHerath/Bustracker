@@ -1,4 +1,14 @@
-<ion-header>
+
+<ion-content>
+  <div class="from">
+   <ion-searchbar (ionInput)="getRoutes($event)" placeholder="From"></ion-searchbar>
+  </div>
+    <div class="to">
+   <ion-searchbar (ionInput)="getRoutes($event)" placeholder="To"></ion-searchbar>
+  </div>
+ <div class="map" id="map" #map></div>
+</ion-content>
+<!--<ion-header>
 
   <ion-navbar>
     <ion-title>{{ 'LIST_MASTER_TITLE' | translate }}</ion-title>
@@ -32,4 +42,4 @@
       </ion-item-options>
     </ion-item-sliding>
   </ion-list>
-</ion-content>
+</ion-content>-->

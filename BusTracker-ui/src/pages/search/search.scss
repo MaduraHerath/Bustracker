@@ -3,4 +3,18 @@ page-search {
         color: #2196F3;
         font-size: 4em;
     }
+    #map {
+    height: 100%;
+  }
+   #floating-panel {
+    position: absolute;
+    top:15px;
+    left: 15px;
+    z-index: 5;
+    padding: 0px;
+    text-align: center;
+    font-family: 'Roboto','sans-serif';
+    line-height: 30px;
+    padding-left: 10px;
+  }
 }

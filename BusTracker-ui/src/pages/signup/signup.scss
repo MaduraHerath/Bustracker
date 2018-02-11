@@ -1,3 +1,28 @@
 page-signup {
+.vertical-align-content > *
+{
+     display: flex!important;
+     align-content: center!important;
+     align-items: center!important;
+     background-color: #2196F3;
+}
+  .splash-logo {
+    margin: auto;
+    background: url('../assets/img/telephone.png') repeat transparent;
+    background-size: 100%;
+    width: 180px;
+    height: 180px;
+   margin-top: 0px !important;
+  }
+
+  .input-item{
+      background: transparent;
+      color: antiquewhite !important;
+      margin-bottom: 12px;
+  }
+ .item-md{
+        padding-left: 0px !important; 
+}
 
 }
+$text-input-placeholder-color:(#FAFAFA);
