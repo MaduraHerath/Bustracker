@@ -1,0 +1,54 @@
+page-listview {
+.outer {
+  align-items: center;
+  display: flex;
+  height: 80px;
+  justify-content: center;
+  overflow: auto;
+  width: 80px;
+  resize:both;
+  padding-left: 5px;
+  padding-right: 5px;
+
+}
+
+.inner{
+  width: 500px;
+
+}
+.col{
+  align-content: center;
+  align-items:center;
+  text-align: center 
+}
+.ion-row {
+text-align: center;
+align-content: center;
+align-items:center;
+}
+svg {  
+  height: 100%;
+}
+
+circle {  
+  padding: 10px;
+  margin: 20px;
+}
+
+.topics{
+  font-size: 32px;
+}
+
+
+text {  
+  fill: #fff;
+  font-size: 3rem;
+  font-family: sans-serif;
+}
+
+scroll-content{
+padding-left: 0px;
+padding-right: 0px;
+}
+
+}

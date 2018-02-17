@@ -1,0 +1,45 @@
+
+<ion-content>
+  <div class="from">
+   <ion-searchbar (ionInput)="getRoutes($event)" placeholder="From"></ion-searchbar>
+  </div>
+    <div class="to">
+   <ion-searchbar (ionInput)="getRoutes($event)" placeholder="To"></ion-searchbar>
+  </div>
+ <div class="map" id="map" #map></div>
+</ion-content>
+<!--<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{ 'LIST_MASTER_TITLE' | translate }}</ion-title>
+
+    <ion-buttons end>
+      <button ion-button icon-only (click)="addItem()">
+        <ion-icon name="add"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+
+  <ion-list>
+    <ion-item-sliding *ngFor="let item of currentItems">
+      <button ion-item (click)="openItem(item)">
+        <ion-avatar item-start>
+            <ion-icon name="bus"></ion-icon>
+        </ion-avatar>
+        <h2>{{item.name}}</h2>
+        <p>{{item.about}}</p>
+        <ion-note item-end *ngIf="item.note">{{item.note}}</ion-note>
+      </button>
+
+      <ion-item-options>
+        <button ion-button color="danger" (click)="deleteItem(item)">
+          {{ 'DELETE_BUTTON' | translate }}
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+</ion-content>-->

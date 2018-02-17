@@ -1,0 +1,54 @@
+<ion-list-header no-lines class="topics">
+  <h2> Nearby Bus Halts </h2>
+</ion-list-header>
+
+
+
+<ion-scroll scrollX="true" style="width:auto; height:140px;padding-left:0px !important;">
+  <div class="inner">
+    <ion-grid>
+      <ion-row>
+        <ion-col col-sm col-auto text-center *ngFor="let route of currentRoutes">
+          <div class="outer">
+            <svg viewBox="0 0 140 140" preserveAspectRatio="xMinYMin meet">
+              <g>
+                <circle fill="#5E35B1" r="50%" cx="50%" cy="50%" class="circle-back" />
+                <text x="50%" y="50%" text-anchor="middle" dy="0.3em">{{route.eta}}</text>
+              </g>
+            </svg>
+          </div>
+        </ion-col>
+
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-scroll>
+<ion-list-header no-lines class="topics">
+  <h2>Nearby Buses</h2>
+</ion-list-header>
+<ion-scroll scrollX="true" style="width:auto; height:140px;padding-left:0px !important;">
+  <div class="inner">
+    <ion-grid>
+      <ion-row>
+        <ion-col col-sm col-auto text-center *ngFor="let route of currentRoutes">
+          <ion-grid>
+            <ion-row>
+              <div class="outer" (click)="openRoutes(route)">
+                <svg viewBox="0 0 140 140" preserveAspectRatio="xMinYMin meet" class="row">
+                  <g>
+                    <circle fill="#1565C0" r="50%" cx="50%" cy="50%" class="circle-back" />
+                    <text x="50%" y="50%" text-anchor="middle" dy="0.3em">{{route.eta}}</text>
+                  </g>
+                </svg>
+              </div>
+            </ion-row>
+            <ion-row text-center>
+              <h2 text-center>{{route.busRoute}}</h2>
+            </ion-row>
+          </ion-grid>
+        </ion-col>
+
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-scroll>

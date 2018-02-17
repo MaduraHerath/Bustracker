@@ -1,0 +1,32 @@
+<ion-content text-center class="vertical-align-content">
+
+  <ion-grid>
+    <ion-row>
+        <ion-col> <div class="splash-logo"></div></ion-col>
+    </ion-row>
+    <ion-row>
+    <ion-row>
+      <ion-col class="center">
+          <p style="color:aliceblue">Enter Your mobile number for future notifications</p>
+      </ion-col>
+    </ion-row>
+      <ion-col>
+        <form (submit)="doSignup()">
+          <ion-list>
+         
+            <ion-item class="input-item">       
+              <ion-input type="text" placeholder="Mobile Number"></ion-input>
+              <!--<ion-input type="text" [(ngModel)]="account.name" name="name"></ion-input>-->
+            </ion-item>
+            <div padding>
+              <button ion-button color="light" round>{{ 'SIGNUP_BUTTON' | translate }}</button>
+            </div>
+
+          </ion-list>
+        </form>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+</ion-content>
